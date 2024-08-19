@@ -38,9 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'custommiddlewareapp',
 ]
 
+'''
+middleware is a framework that provides a method to process requests and responses globally before they are processed by the view or after they leave the view
+'''
 MIDDLEWARE = [
+    'custommiddlewareapp.middleware.MaintainMiddleware', #! Must add custom middleware here
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
